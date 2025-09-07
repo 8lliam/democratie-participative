@@ -1,0 +1,31 @@
+<link href="css/stylesFormulaire.css" rel="stylesheet" />
+<header>
+  <h1>Démocratie participative - Projet SAE S3</h1>
+</header>
+<main>
+  <div class="formulaireNonConnectée">
+    <h2>Se connecter</h2>
+
+    <form action="index.php" method="POST">
+      <input type="hidden" name="controleur" value="ControleurInternaute" />
+      <input type="hidden" name="action" value="connecterInternaute" />
+
+      <label for="email">Email :</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="mdp">Mot de passe:</label><br />
+      <input type="password" id="mdp" name="mdp" required /><br /><br />
+
+      <input type="submit" value="Se connecter" />
+    </form>
+
+    <!-- Lien pour accéder à la page d'inscription -->
+    <p>
+      Pas encore de compte ?
+      <a
+        href="https://projets.iut-orsay.fr/saes3-wsimion/index.php?controleur=Controleur&action=afficherFormulaireInscription"
+        >Inscrivez-vous ici</a
+      >.
+    </p>
+  </div>
+</main>

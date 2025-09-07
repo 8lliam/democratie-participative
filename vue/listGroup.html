@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Groupes</title>
+</head>
+<body>
+    <h1>Groupes</h1>
+    <ul id="group-list"></ul>
+    <script>
+        fetch('http://localhost/RestAPI.php?route=get_groups')
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    const groupList = document.getElementById('group-list');
+                    data.groups.forEach(group => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<a href="chat.html?group_id=${group.id}">${group.name}</a>`;
+                        groupList.appendChild(li);
+                    });
+                } else {
+                    console.error(data.message);
+                }
+            });
+    </script>
+</body>
+</html>

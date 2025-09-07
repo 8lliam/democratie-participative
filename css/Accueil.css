@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0px 10px;
+  background-color: #ceebc6;
+  color: #54eb6d;
+}
+
+header {
+  border-bottom: solid 5px rgb(0, 0, 0);
+  border-radius: 5px;
+  color: rgb(39, 97, 27);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  margin-left: 250px;
+  color: rgb(4, 53, 16);
+}
+
+.nouveaute {
+  display: flex;
+  flex-direction: row; /* Aligne l'image et le texte horizontalement */
+  align-items: flex-start;
+  gap: 20px; /* Espacement entre le texte et l'image */
+  margin-bottom: 20px;
+}
+
+.nouveaute-content {
+  display: flex;
+  flex-direction: column; /* Aligne le titre et le texte verticalement */
+  flex: 2;
+}
+
+.nouveaute-content h3 {
+  margin-bottom: 10px; /* Espace entre le titre et le texte */
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.nouveaute-content p,
+.nouveaute-content ul {
+  margin-top: 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.image {
+  flex: 1; /* L'image occupe moins d'espace comparé au texte */
+  max-width: 300px; /* Largeur maximale de l'image */
+}
+
+.image img {
+  max-width: 100%; /* L'image ne dépasse pas son conteneur */
+  height: auto; /* Maintient les proportions de l'image */
+  border-radius: 10px;
+}

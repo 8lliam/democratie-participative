@@ -1,0 +1,43 @@
+<main>
+  <div class="formulaireProposition">
+    <h2>Ajouter une Proposition</h2>
+
+    <form action="index.php" method="POST">
+      <input type="hidden" name="controleur" value="ControleurProposition" />
+      <input type="hidden" name="action" value="créerProposition" />
+
+      <label for="titre">Titre :</label>
+      <input type="text" name="titre" id="titre" required /><br />
+
+      <label for="description">Description :</label>
+      <textarea name="description" id="description" required></textarea><br />
+
+      <label for="dureeMaximale">Duree maximale (en jours) :</label>
+      <input
+        type="number"
+        name="dureeMaximale"
+        id="dureeMaximale"
+        required
+      /><br />
+
+      <label for="dureeMinimale">Duree minimale (en jours) :</label>
+      <input
+        type="number"
+        name="dureeMinimale"
+        id="dureeMinimale"
+        required
+      /><br />
+
+      <label for="idTheme">Theme :</label>
+      <select name="idTheme" id="idTheme">
+        <option value="">Choisissez une catégorie</option>
+        <option value="education">Éducation</option>
+        <option value="environnement">Environnement</option>
+        <option value="sante">Santé</option>
+        <option value="technologie">Technologie</option></select
+      ><br />
+
+      <button type="submit">Ajouter Proposition</button>
+    </form>
+  </div>
+</main>

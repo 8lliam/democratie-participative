@@ -1,0 +1,13 @@
+body {
+  background-color: #ceebc6;
+}
+
+header {
+  border-bottom: solid 5px rgb(0, 0, 0);
+  width: 100%;
+}
+
+main {
+  margin-left: 250px;
+  color: rgb(4, 53, 16);
+}
